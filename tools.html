@@ -1,0 +1,220 @@
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light" />
+  <title>𝚃𝚘𝚘𝚕𝚜</title>
+  <link rel="stylesheet" href="tools.css">
+  <script type="text/javascript" src='./tools.js'></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="icon" href="img/1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&family=Stoke&family=Yellowtail&family=Geo&family=Oswald&family=Lobster&family=Cookie&family=Chewy&family=Limelight&family=Sacramento&family=Plaster&display=swap" rel="stylesheet">
+  <script>
+
+    var charactersCollection =
+    [
+
+
+     ['0', '𝟶'],
+     ['1', '𝟷'],
+     ['2', '𝟸'],
+     ['3', '𝟹'],
+     ['4', '𝟺'],
+
+     ['5', '𝟻'],
+     ['6', '𝟼'],
+     ['7', '𝟽'],
+     ['8', '𝟾'],
+     ['9', '𝟿'],
+
+     ['A', '𝙰'],
+     ['B', '𝙱'],
+     ['C', '𝙲'],
+     ['D', '𝙳'],
+     ['E', '𝙴'],
+
+     ['F', '𝙵'],
+     ['G', '𝙶'],
+     ['H', '𝙷'],
+     ['I', '𝙸'],
+     ['J', '𝙹'],
+
+     ['K', '𝙺'],
+     ['L', '𝙻'],
+     ['M', '𝙼'],
+     ['N', '𝙽'],
+     ['O', '𝙾'],
+
+     ['P', '𝙿'],
+     ['Q', '𝚀'],
+     ['R', '𝚁'],
+     ['S', '𝚂'],
+     ['T', '𝚃'],
+
+     ['U', '𝚄'],
+     ['V', '𝚅'],
+     ['W', '𝚆'],
+     ['X', '𝚇'],
+     ['Y', '𝚈'],
+
+     ['Z', '𝚉'],
+     null,
+     null,
+     null,
+     null,
+
+     ['a', '𝚊'],
+     ['b', '𝚋'],
+     ['c', '𝚌'],
+     ['d', '𝚍'],
+     ['e', '𝚎'],
+
+     ['f', '𝚏'],
+     ['g', '𝚐'],
+     ['h', '𝚑'],
+     ['i', '𝚒'],
+     ['j', '𝚓'],
+
+     ['k', '𝚔'],
+     ['l', '𝚕'],
+     ['m', '𝚖'],
+     ['n', '𝚗'],
+     ['o', '𝚘'],
+
+     ['p', '𝚙'],
+     ['q', '𝚚'],
+     ['r', '𝚛'],
+     ['s', '𝚜'],
+     ['t', '𝚝'],
+
+     ['u', '𝚞'],
+     ['v', '𝚟'],
+     ['w', '𝚠'],
+     ['x', '𝚡'],
+     ['y', '𝚢'],
+
+     ['z', '𝚣'],
+     null,
+     null,
+     null,
+     null,
+
+    ];
+
+    var translation = {};
+    for (var index in charactersCollection) {
+      var characters = charactersCollection[index];
+      if (characters) {
+        translation[characters[0]] = characters[1];
+      }
+      if (characters) {
+        var charactersSet = {};
+        for (var character of characters) {
+          if (charactersSet[character]) {
+            console.log(characters);
+          }
+          charactersSet[character] = true;
+        }
+      }
+    }
+
+    function translate(character) {
+      return translation[character] || character;
+    }
+
+    function run() {
+      var input = document.getElementById('input');
+      var text = input.value || input.placeholder;
+      text = text.replace(/./g, translate);
+      document.getElementById('output').value = text;
+    }
+
+    var buffer = null;
+    function empty() {
+      var input = document.getElementById('input');
+      if (input.value) {
+        buffer = input.value;
+        input.value = '';
+        input.focus();
+      } else {
+        input.value = buffer || '';
+        buffer = null;
+      }
+      document.getElementById('output').value = '';
+    }
+
+    window.onload = function () {
+      function createSelect(characters) {
+        var select = document.createElement('select');
+        for (var index in characters) {
+          var option = document.createElement('option');
+          option.textContent = characters[index];
+          option.value = characters[index];
+          option.selected = index == 1;
+          select.appendChild(option);
+        }
+        select.onchange = function() {
+          translation[characters[0]] = select.value;
+        }
+        return select;
+      }
+      var selects = document.getElementById('selects');
+      for (var index in charactersCollection) {
+        var characters = charactersCollection[index];
+        if (characters) {
+          selects.appendChild(createSelect(characters));
+        }
+        if (index % 5 == 4) {
+          selects.appendChild(document.createElement('br'));
+        }
+      }
+      if (window.location.search) {
+        document.getElementById('debug').style.display = 'inline';
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+
+<!-- ヘッダー -->
+<header>
+  <h1 class="h"></h1>
+  <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;𝙷𝚘𝚖𝚎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <a href="gallery.html">&nbsp;&nbsp;𝙶𝚊𝚕𝚕𝚎𝚛𝚢&nbsp;&nbsp;</a>
+  <a href="column.html">&nbsp;&nbsp;𝙲𝚘𝚕𝚞𝚖𝚗&nbsp;&nbsp;</a>
+  <a href="tools.html">&nbsp;&nbsp;&nbsp;𝚃𝚘𝚘𝚕𝚜&nbsp;&nbsp;&nbsp;</a>
+</header>
+
+<p>このウェブサイトの見出しに使われているフォントには、ある特徴があるのですが、分かりますか？<br>…では、見出しを選択･コピーして、どこかに貼り付けてみてください（ブラウザのアドレスバーなど）。<br>分かりましたか？そう、<span>このフォントはどこでも表示可能</span>なのです。<br>普通なら、貼り付けてもフォントが適応されず、プレーンテキストになってしまうところですが、<br>このフォントなら好きなところで使えます。そこで、フォント変換ツールを作ってみました。<br>テキストエリアに変換したい文(アルファベットと数字のみ)を入力して、｢Convert｣を押してください。<br>すると、下のテキストエリアに変換された文字列が現れます。コピーしてお使いください。</p>
+
+		<div class="box">
+
+			<form onSubmit="return false">
+				<textarea rows="15" cols="75" id="input" placeholder="*Enter Text Here*"></textarea><br>
+				<input type="button" value="&emsp;&emsp;Convert&emsp;&emsp;" onClick="run();" style="font-size: 30px; margin: 20px; background-color: teal; border-radius: 20px; color: white; border: none; font-family: 'z';src: url('zen.ttf') format('truetype');"/>
+				<input type="button" value="&nbsp;&emsp;&emsp;Clear&emsp;&emsp;&nbsp;" onClick="empty();" style="font-size: 30px; margin: 20px; background-color: teal; border-radius: 20px; color: white; border: none; font-family: 'z';src: url('zen.ttf') format('truetype');"/>
+				<br>
+				<textarea rows="15" cols="75" id="output" readonly></textarea>
+			</form>
+
+		</div>
+
+<!-- フッタ ー-->
+<footer>
+  <br>↓役立つ＆面白いサイトを少しだけ載せておきました！<br><br>
+  <div>
+    <a href="https://jpn-lab.com/script/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;𝙻𝚊𝚋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a href="https://unicodes.jessetane.com/">&nbsp;&nbsp;𝚄𝚗𝚒𝚌𝚘𝚍𝚎&nbsp;&nbsp;</a>
+    <a href="https://codepoints.net/">&nbsp;&nbsp;𝙿𝚘𝚒𝚗𝚝𝚜&nbsp;&nbsp;</a>
+    <a href="https://uenosato.net/moji/skm/skm_00.html">&nbsp;&nbsp;&nbsp;&nbsp;𝚆𝚘𝚛𝚕𝚍&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+  &copy; 𝙶𝚕𝚢𝚙𝚑_𝙶𝚊𝚛𝚍𝚎𝚗
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+/* ===== 全体のスタイル ===== */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: "z";
+    src: url("zen.ttf") format("truetype");
+  }
+  
+  body {
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: white;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* ===== ヘッダーのスタイル ===== */
+  /* ヘッダー */
+  header {
+    /* 背景の色 */
+    background-color: white;
+    background: linear-gradient(transparent 48%, yellow 48%);
+    /* 背景の画像 */
+    /* 背景の画像を枠いっぱいに広げる */
+    background-size: cover;
+    /* 内がわの余白 */
+    margin: 0;
+    text-align: center;
+  }
+  
+  
+  a {
+    font-size: 40px;
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background: linear-gradient(transparent 50%, white 50%);
+    /* 内がわの余白 */
+    padding: 10px;
+    /* 文字の装飾 */
+    text-decoration: none;
+    /* 角丸 */
+    /* 並べ方 */
+    display: inline-flex;
+    /* 文字の整列 */
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* リンクにさわった時 */
+  a:hover {
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background: linear-gradient(transparent 50%, teal 50%);
+  }
+   
+  
+  /* h1見出し */
+  h1 {
+    /* 文字の大きさ */
+    font-size: 150px;
+    /* 文字の種類 */
+    
+    font-weight: normal;
+    /* 文字の色 */
+    color: black;
+    /* 文字の整列 */
+    text-align: center;
+  }
+  
+  /* ===== お店紹介のスタイル ===== */
+  /* セクション */
+  section {
+    /* 背景の色 */
+    background-color: white;
+    /* 内がわの余白 */
+    padding: 30px;
+  }
+  
+  /* h2見出し */
+  h2 {
+    /* 文字の色 */
+    color: black;
+    /* 文字の大きさ */
+    font-size: 20px;
+    /* 下がわの余白 */
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 30px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+  
+  .box {
+    width: 97%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    margin: auto;
+  }
+
+  .frame {
+    width: 30%;
+    height: auto;
+    background-color: #e0e0e0;
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    padding: auto;
+    border-radius: 50px;
+  }
+  
+  img {
+    width: 80%;
+    object-fit: contain;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  table {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10%;
+    font-family: "z";
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10%;
+  }
+  
+  .typing-animation {
+    text-align: center; 
+    color: black;
+    font-size: 50px;
+    font-family: "z";
+    height: 300px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .typing-animation::after {
+    content: '';
+    border-right: 2px solid black;
+    margin-left: 2px;
+    animation: flashing 1s linear infinite;
+    opacity: 0;
+  }
+  
+  @keyframes flashing {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* ===== フッターのスタイル ===== */
+  /* フッター */
+  footer {
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background-color: yellow;
+    /* 文字の整列 */
+    text-align: center;
+    /* 内がわの余白 */
+    padding: 30px;
+    display: block;
+    padding-bottom: 50px;
+    bottom: 0;
+  }
+
+
+@media (max-width: 1350px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 28px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1330px){
+  table {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1250px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 26px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+
+  table {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 1150px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 24px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+
+}
+
+@media (max-width: 1050px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 22px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+
+}
+
+@media (max-width: 950px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 5px solid yellow;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 1.5em;
+  }
+
+}
+

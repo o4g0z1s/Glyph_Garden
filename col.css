@@ -1,0 +1,309 @@
+/* ===== 全体のスタイル ===== */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: "z";
+    src: url("zen.ttf") format("truetype");
+  }
+  
+
+  body {
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: white;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* ===== ヘッダーのスタイル ===== */
+  /* ヘッダー */
+  header {
+    /* 背景の色 */
+    background-color: white;
+    background: linear-gradient(transparent 48%, yellow 48%);
+    /* 背景の画像 */
+    /* 背景の画像を枠いっぱいに広げる */
+    background-size: cover;
+    /* 内がわの余白 */
+    margin: 0;
+    text-align: center;
+  }
+  
+  
+  .link {
+    font-size: 40px;
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background: linear-gradient(transparent 50%, white 50%);
+    /* 内がわの余白 */
+    padding: 10px;
+    /* 文字の装飾 */
+    text-decoration: none;
+    /* 角丸 */
+    /* 並べ方 */
+    display: inline-flex;
+    /* 文字の整列 */
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* リンクにさわった時 */
+  .link:hover {
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background: linear-gradient(transparent 50%, teal 50%);
+  }
+   
+  
+  /* h1見出し */
+  h1 {
+    /* 文字の大きさ */
+    font-size: 150px;
+    /* 文字の種類 */
+    
+    font-weight: normal;
+    /* 文字の色 */
+    color: black;
+    /* 文字の整列 */
+    text-align: center;
+  }
+  
+  /* ===== お店紹介のスタイル ===== */
+  /* セクション */
+  section {
+    /* 背景の色 */
+    background-color: white;
+    /* 内がわの余白 */
+    padding: 30px;
+  }
+  
+  /* h2見出し */
+  h2 {
+    /* 文字の色 */
+    color: black;
+    /* 文字の大きさ */
+    font-size: 20px;
+    /* 下がわの余白 */
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 25px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+  span {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .x {
+    font-size: 100px;
+    font-weight: normal;
+  }
+  
+  .back {
+    font-size: 40px;
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background: linear-gradient(transparent 50%, teal 50%);
+    /* 内がわの余白 */
+    padding: 10px;
+    /* 文字の装飾 */
+    text-decoration: none;
+    /* 角丸 */
+    /* 並べ方 */
+    display: inline-flex;
+    /* 文字の整列 */
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    background-color: white;
+  }
+  
+  /* リンクにさわった時 */
+  .back:hover {
+    background-color: teal;    
+  }
+
+
+  .wrap {
+    text-align: center;
+  }
+
+  img {
+    display: inline;
+  }
+
+  .kana {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 1.5em;
+  }
+
+  .hg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 1.5em;
+  }
+
+  @media screen and (max-width: 1100px){
+    .hg {
+      font-size: 25px;
+      font-family: normal;
+    }
+  }
+
+  .typing-animation {
+    text-align: center; 
+    color: black;
+    font-size: 50px;
+    font-family: "z";
+    height: 300px;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .typing-animation::after {
+    content: '';
+    border-right: 2px solid black;
+    margin-left: 2px;
+    animation: flashing 1s linear infinite;
+    opacity: 0;
+  }
+  
+  @keyframes flashing {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+  /* ===== フッターのスタイル ===== */
+  /* フッター */
+  footer {
+    /* 文字の色 */
+    color: black;
+    /* 背景の色 */
+    background-color: yellow;
+    /* 文字の整列 */
+    text-align: center;
+    /* 内がわの余白 */
+    padding: 30px;
+    display: block;
+    padding-bottom: 50px;
+    bottom: 0;
+    margin-top: 70px;
+  }
+
+
+@media (max-width: 1350px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 23px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 1250px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 21px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 1150px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 19px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 1050px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 17px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 950px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 15px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 880px) {
+  p {
+    text-align: center;
+    margin: 50px;
+    font-family: "z";
+    font-size: 13px;
+    color: rgb(50, 50, 50);
+    line-height: 2em;
+  }
+
+}
